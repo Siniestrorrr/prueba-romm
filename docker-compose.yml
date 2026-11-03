@@ -1,0 +1,11 @@
+version: "3"
+services:
+  romm:
+    image: rommapp/romm:latest
+    container_name: romm
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./roms:/roms
+      - ./assets:/assets
+    restart: unless-stopped
